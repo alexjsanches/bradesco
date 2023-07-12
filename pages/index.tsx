@@ -384,7 +384,7 @@ const NAV_ITEMS: Array<NavItem> = [
     label: 'Sobre',
     children: [
       {
-        label: 'A Bradesco Saúde',
+        label: 'A Hospitalar',
         href: '#',
       },
       {
