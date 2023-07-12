@@ -12,6 +12,7 @@ import {
     createIcon,
     IconProps,
     useColorModeValue,
+    ResponsiveValue,
 } from '@chakra-ui/react';
 
 import ReactPlayer from 'react-player';
@@ -114,7 +115,7 @@ const PlayIcon = createIcon({
 });
 
 export const Blob = (props: CustomIconProps) => {
-    const { size, color, position, top, left, zIndex, ...rest } = props;
+    const { size, color, top, left, zIndex, ...rest } = props;
 
     return (
         <Box
@@ -125,7 +126,6 @@ export const Blob = (props: CustomIconProps) => {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             color={color}
-            position={position}
             top={top}
             left={left}
             zIndex={zIndex}
@@ -144,7 +144,6 @@ export const Blob = (props: CustomIconProps) => {
 interface CustomIconProps extends IconProps {
     size: string;
     color: string;
-    position: string;
     top: string;
     left: number;
     zIndex: number;
