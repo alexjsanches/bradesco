@@ -24,8 +24,6 @@ import {
   HamburgerIcon,
   CloseIcon,
   ChevronDownIcon,
-  ChevronRightIcon,
-  AddIcon,
 } from '@chakra-ui/icons';
 
 import Features from './features'
@@ -34,6 +32,7 @@ import Features2 from './features2'
 import Features3 from './features3'
 import Features4 from './features4'
 import Leadster from './leadster'
+import Chat from './chat'
 import Footer from './footer'
 import AccordionHelp from './accordion';
 import Form from './form'
@@ -203,21 +202,23 @@ return (
 
 
       </Stack>
+      <Features4 />
       <Features1/>
-
+      <Features2 />
       <Features />
       
-        <Features2 />
+        
       <Features3 />
-      <Features4 />
+      
       <Box>
-        <AccordionHelp />
+        
       </Box>
       <Box>
         <Footer />
        
       </Box>
       <Box >
+        
         <Leadster />
       </Box>
 

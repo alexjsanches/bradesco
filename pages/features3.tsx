@@ -65,7 +65,7 @@ export default function gridListWithCTA() {
           <GridItem colSpan={1}>
             <Flex>
               <chakra.p>
-                No Hospitalar, sua família conta com uma ampla rede de médicos credenciados, clínicas e laboratórios, além de serviços próprios de clínica de vacinas e internação domiciliar.
+                Nos negócios e na vida, aproveitar as oportunidades é fundamental para o sucesso. Entre em contato conosco agora e receba uma ligação em até 3 minutos para obter a solução adequada para você.
               </chakra.p>
             </Flex>
           </GridItem>

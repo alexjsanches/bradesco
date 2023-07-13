@@ -54,7 +54,7 @@ const Card = ({ heading, icon }: CardProps) => {
           pointerEvents="all"
           bg={'gray.100'}
           _hover={{
-            color: 'white'
+            color: '#0089de'
           }}
           
         >
@@ -73,12 +73,9 @@ export default function gridListWith() {
     <Box p={4}>
       
       <Stack spacing={4} as={Container} maxW={'3xl'} textAlign={'center'}>
-        <Heading fontSize={{ base: '2xl', sm: '4xl' }} fontWeight={'bold'}>
-          Nossos Planos
+        <Heading fontSize={{ base: '2xl', sm: '3xl' }} fontWeight={'bold'}>
+        Conectamos você aos melhores benefícios de saúde do mercado, oferecendo soluções personalizadas para atender às suas necessidades.
         </Heading>
-        <Text color={'gray.600'} fontSize={{ base: 'sm', sm: 'lg' }}>
-        Conectamos sua empresa aos melhores benefícios de saúde do mercado, oferecendo soluções personalizadas para atender às suas necessidades.
-        </Text>
       </Stack>
 
       <Container maxW={'5xl'} mt={12}>
