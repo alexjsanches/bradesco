@@ -229,7 +229,7 @@ return (
        
       </Box>
       <Box >
-        <Chat/>
+        
         <Leadster />
       </Box>
 
