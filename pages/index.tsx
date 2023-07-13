@@ -103,7 +103,7 @@ return (
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'center' }} >
           <a href="#">
-            <Image src="https://planohospitalar.org.br/wp-content/uploads/2020/05/logo.png" alt="Logo Hospitalar" w={220} h={41} />
+            <Image src="https://i.imgur.com/KrRh7RX.png" alt="Logo B Mais" w={220} h={41} />
           </a>
         </Flex>
 
