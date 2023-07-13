@@ -14,7 +14,7 @@ import {
   
    export default function hero() {
    
-   const App = () => (
+   return(
     <Box maxW="7xl" mx="auto" px={{ base: '0', lg: '12' }} py={{ base: '0', lg: '12' }}>
       <Stack direction={{ base: 'column-reverse', lg: 'row' }} spacing={{ base: '0', lg: '20' }}>
         <Box
