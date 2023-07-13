@@ -12,7 +12,9 @@ import {
   } from '@chakra-ui/react'
   import { FaArrowRight } from 'react-icons/fa'
   
-  export const App = () => (
+   export default function hero() {
+   
+   const App = () => (
     <Box maxW="7xl" mx="auto" px={{ base: '0', lg: '12' }} py={{ base: '0', lg: '12' }}>
       <Stack direction={{ base: 'column-reverse', lg: 'row' }} spacing={{ base: '0', lg: '20' }}>
         <Box
@@ -62,3 +64,4 @@ import {
       </Stack>
     </Box>
   )
+   }
