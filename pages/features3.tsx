@@ -23,7 +23,8 @@ import {
   useDisclosure,
   Text,
 } from '@chakra-ui/react';
-import React from 'react';
+import React, { useRef } from 'react'
+import ModalForm from './modal';
 
 interface FeatureProps {
   heading: string;
@@ -35,10 +36,13 @@ const OverlayOne = () => (
 );
 
 export default function gridListWithCTA() {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const modalRef = useRef(null);
 
-  const initialRef = React.useRef(null)
-  const finalRef = React.useRef(null)
+  const handleLinkClick = () => {
+    if (modalRef.current) {
+      modalRef.current.openModal();
+    }
+  };
 
   const Feature = ({ heading, text }: FeatureProps) => {
     return (
@@ -86,7 +90,7 @@ export default function gridListWithCTA() {
                 color={'white'}
                 bg='#0089de'
                 onClick={() => {
-                  onOpen();
+                  handleLinkClick();
                 }}
                 _hover={{
                   bg: '#00afd1',
@@ -94,41 +98,10 @@ export default function gridListWithCTA() {
               >
                 Me ligue!
               </Button>
+              <ModalForm ref={modalRef} />
             </VStack>
           </GridItem>
         </Grid>
-        <Modal isCentered isOpen={isOpen} onClose={onClose} initialFocusRef={initialRef}
-        finalFocusRef={finalRef}>
-          <OverlayOne />
-          <ModalContent>
-            <ModalHeader>Informe seus dados, que entraremos em contato em 3 minutos!</ModalHeader>
-            <ModalCloseButton />
-            <ModalBody pb={6}>
-            <FormControl>
-              <FormLabel>Nome</FormLabel>
-              <Input ref={initialRef} placeholder='Informe seu nome' />
-            </FormControl>
-            <FormControl mt={4}>
-              <FormLabel>Celular</FormLabel>
-              <Input placeholder='Informe seu celular' />
-            </FormControl>
-            <FormControl mt={4}>
-              <FormLabel>Email</FormLabel>
-              <Input placeholder='Informe seu email' />
-            </FormControl>
-            <FormControl mt={4}>
-              <FormLabel>Cidade</FormLabel>
-              <Input placeholder='Informe sua cidade' />
-            </FormControl>
-          </ModalBody>
-          <ModalFooter>
-            <Button colorScheme='blue' mr={3}>
-              Enviar
-            </Button>
-            <Button onClick={onClose}>Cancelar</Button>
-          </ModalFooter>
-          </ModalContent>
-        </Modal>
       </Box>
     </Box>
   );

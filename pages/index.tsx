@@ -37,8 +37,9 @@ import Footer from './footer'
 import AccordionHelp from './accordion';
 import Form from './form'
 import { useRouter } from 'next/router';
-
+import React, { useRef } from 'react'
 import { useEffect, useState } from 'react';
+import ModalForm from './modal'
 
 
 export default function WithSubnavigation() {
@@ -47,6 +48,14 @@ export default function WithSubnavigation() {
 
   const handleNavigateToContact = () => {
     router.push('/footer');
+  };
+
+  const modalRef = useRef(null);
+
+  const handleLinkClick = () => {
+    if (modalRef.current) {
+      modalRef.current.openModal();
+    }
   };
 
   const [isSticky, setIsSticky] = useState(false);
@@ -185,9 +194,11 @@ return (
                 color={'white'}
                 _hover={{
                   bg: '#00afd1',
-                }}>
+                }}
+                onClick={handleLinkClick}>
                 Quero uma demonstração
               </Button>
+              <ModalForm ref={modalRef} />
             </Stack>
           </Stack>
         </Flex>
@@ -218,7 +229,7 @@ return (
        
       </Box>
       <Box >
-        
+        <Chat/>
         <Leadster />
       </Box>
 

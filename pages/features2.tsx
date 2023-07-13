@@ -7,6 +7,7 @@ import {
   Icon,
   Stack,
   Text,
+  useDisclosure,
   useColorModeValue,
 } from '@chakra-ui/react';
 import { ReactElement } from 'react';
@@ -17,6 +18,8 @@ import {
 } from 'react-icons/fc';
 
 import {FaHeart, FaLeaf, FaTooth} from 'react-icons/fa'
+
+
 
 interface CardProps {
   heading: string;
