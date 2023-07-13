@@ -20,7 +20,7 @@ import {
   const Logo = (props: any) => {
     return (
       <a href='http://bmaissaude.com.br'>
-      <Image src="https://bmaissaude.com.br/wp-content/uploads/2023/06/cropped-B-Saude.pdf-5-2048x874.png" alt="Logo B Mais" w={220} h={'auto'} />
+      <Image src="https://i.imgur.com/6w1w8vK.png" alt="Logo B Mais" w={220} h={'auto'} />
       </a>
       );
   };
