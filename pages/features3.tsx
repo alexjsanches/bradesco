@@ -79,16 +79,17 @@ export default function gridListWithCTA() {
                 size={'md'}
                 w={'150px'}
                 as={'a'}
+                cursor={'pointer'}
                 display={{ base: 'inline-flex', md: 'inline-flex' }}
                 fontSize={'sm'}
                 fontWeight={600}
                 color={'white'}
-                bg='#013F7A'
+                bg='#0089de'
                 onClick={() => {
                   onOpen();
                 }}
                 _hover={{
-                  bg: '#013f7ad4',
+                  bg: '#00afd1',
                 }}
               >
                 Me ligue!

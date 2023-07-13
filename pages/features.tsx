@@ -70,7 +70,7 @@ export default function SplitWithImage() {
                 alignSelf={'flex-start'}
                 rounded={'md'}
               >
-                Sobre a Hospitalar
+                Sobre a B Mais
               </Text>
               <Heading>Por quê escolher a Hospitalar? </Heading>
               <Text color={'gray.500'} fontSize={'lg'}>

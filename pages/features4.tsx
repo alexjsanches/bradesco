@@ -1,150 +1,64 @@
 import {
-    Container,
-    Stack,
-    Flex,
     Box,
+    Flex,
     Heading,
-    Text,
-    Button,
-    Image,
+    HStack,
     Icon,
-    IconButton,
-    createIcon,
-    IconProps,
+    Image,
+    Link,
+    Skeleton,
+    Stack,
     useColorModeValue,
-    ResponsiveValue,
-} from '@chakra-ui/react';
-
-import ReactPlayer from 'react-player';
-
-export default function CallToActionWithVideo() {
-    return (
-        <Container maxW={'5xl'}>
-            <Stack
-                align={'center'}
-                spacing={{ base: 8, md: 10 }}
-                py={{ base: 20, md: 28 }}
-                direction={{ base: 'column', md: 'row' }}>
-                <Stack flex={1} spacing={{ base: 5, md: 10 }}>
-                    <Heading
-                        lineHeight={1.1}
-                        fontWeight={600}
-                        fontSize={{ base: '4xl', sm: '3xl', lg: '5xl' }}>
-                        <Text
-                            as={'span'}
-                            position={'relative'}
-                            color={'white'}
-                            _after={{
-                                content: "''",
-                                width: 'full',
-                                position: 'absolute',
-                                bottom: 1,
-                                height: 50,
-                                left: 0,
-                                bgGradient: 'linear(to top, #013F7A, #013f7ad4)',
-                                zIndex: -1,
-                                animation: 'moveRight 2s ease-in-out forwards',
-
-                            }}
-                        >
-                            O plano certo
-                        </Text>
-                        <br />
-                        <Text
-                            as={'span'}
-                            bgGradient="linear(to top, #013F7A, #013f7ad4)"
-                            bgClip="text">
-                            para quem quer mais!
-                        </Text>
-                    </Heading>
-                    <Text color={'gray.500'}>
-                        Proporcione o melhor cuidado de saúde para a sua equipe! Escolha o plano mais completo e especializado em atender às necessidades do seu negócio. Com a Hospitalar, você garante o bem-estar e a qualidade de vida dos seus colaboradores. Invista no cuidado com a saúde e conte com uma assistência médica de excelência.
-                    </Text>
-                    <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
-                        <Button
-                            rounded={'full'}
-                            bg="#013f7a"
-                            color={'white'}
-                            _hover={{
-                                bg: '#013f7ad4',
-                            }} leftIcon={<PlayIcon h={4} w={4} color={'gray.300'} />}>
-                            Saiba Mais
-                        </Button>
-                    </Stack>
-                </Stack>
-                <Flex
-                    flex={1}
-                    justify={'center'}
-                    align={'center'}
-                    position={'relative'}
-                    w={'full'}>
-                    <Blob
-                        size="100%"
-                        color={useColorModeValue('red.50', 'red.400')}
-                        position={'absolute'}
-                        top={'-20%'}
-                        left={0}
-                        zIndex={-1}
-                    />
-                    <Box
-                        position={'relative'}
-                        height={'300px'}
-                        rounded={'2xl'}
-                        boxShadow={'2xl'}
-                        width={'full'}
-                        overflow={'hidden'}
-                    >
-                        <ReactPlayer
-                            url="https://www.youtube.com/watch?v=NasvCJtM5Eo"
-                            width="100%"
-                            height="100%"
-                            controls
-                        />
-                    </Box>
-                </Flex>
-            </Stack>
-        </Container>
-    );
-}
-
-const PlayIcon = createIcon({
-    displayName: 'PlayIcon',
-    viewBox: '0 0 58 58',
-    d:
-        'M28.9999 0.562988C13.3196 0.562988 0.562378 13.3202 0.562378 29.0005C0.562378 44.6808 13.3196 57.438 28.9999 57.438C44.6801 57.438 57.4374 44.6808 57.4374 29.0005C57.4374 13.3202 44.6801 0.562988 28.9999 0.562988ZM39.2223 30.272L23.5749 39.7247C23.3506 39.8591 23.0946 39.9314 22.8332 39.9342C22.5717 39.9369 22.3142 39.8701 22.0871 39.7406C21.86 39.611 21.6715 39.4234 21.5408 39.1969C21.4102 38.9705 21.3421 38.7133 21.3436 38.4519V19.5491C21.3421 19.2877 21.4102 19.0305 21.5408 18.8041C21.6715 18.5776 21.86 18.3899 22.0871 18.2604C22.3142 18.1308 22.5717 18.064 22.8332 18.0668C23.0946 18.0696 23.3506 18.1419 23.5749 18.2763L39.2223 27.729C39.4404 27.8619 39.6207 28.0486 39.7458 28.2713C39.8709 28.494 39.9366 28.7451 39.9366 29.0005C39.9366 29.2559 39.8709 29.507 39.7458 29.7297C39.6207 29.9523 39.4404 30.1391 39.2223 30.272Z',
-});
-
-export const Blob = (props: CustomIconProps) => {
-    const { size, color, top, left, zIndex, ...rest } = props;
-
-    return (
+  } from '@chakra-ui/react'
+  import { FaArrowRight } from 'react-icons/fa'
+  
+  export const App = () => (
+    <Box maxW="7xl" mx="auto" px={{ base: '0', lg: '12' }} py={{ base: '0', lg: '12' }}>
+      <Stack direction={{ base: 'column-reverse', lg: 'row' }} spacing={{ base: '0', lg: '20' }}>
         <Box
-            as="svg"
-            width={size}
-            height={size}
-            viewBox="0 0 578 440"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            color={color}
-            top={top}
-            left={left}
-            zIndex={zIndex}
-            {...rest}
+          width={{ lg: 'sm' }}
+          transform={{ base: 'translateY(-50%)', lg: 'none' }}
+          bg={{ base: useColorModeValue('red.50', 'gray.700'), lg: 'transparent' }}
+          mx={{ base: '6', md: '8', lg: '0' }}
+          px={{ base: '6', md: '8', lg: '0' }}
+          py={{ base: '6', md: '8', lg: '12' }}
         >
-            <path
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M239.184 439.443c-55.13-5.419-110.241-21.365-151.074-58.767C42.307 338.722-7.478 282.729.938 221.217c8.433-61.644 78.896-91.048 126.871-130.712 34.337-28.388 70.198-51.348 112.004-66.78C282.34 8.024 325.382-3.369 370.518.904c54.019 5.115 112.774 10.886 150.881 49.482 39.916 40.427 49.421 100.753 53.385 157.402 4.13 59.015 11.255 128.44-30.444 170.44-41.383 41.683-111.6 19.106-169.213 30.663-46.68 9.364-88.56 35.21-135.943 30.551z"
-                fill="currentColor"
-            />
+          <Stack spacing={{ base: '8', lg: '10' }}>
+            <Stack spacing={{ base: '2', lg: '4' }}>
+              <Heading size="xl" color={useColorModeValue('red.500', 'red.300')}>
+                Misguided
+              </Heading>
+              <Heading size="xl" fontWeight="normal">
+                Refresh your wardrobe
+              </Heading>
+            </Stack>
+            <HStack spacing="3">
+              <Link color={useColorModeValue('red.500', 'red.300')} fontWeight="bold" fontSize="lg">
+                Discover now
+              </Link>
+              <Icon color={useColorModeValue('red.500', 'red.300')} as={FaArrowRight} />
+            </HStack>
+          </Stack>
         </Box>
-    );
-};
-
-interface CustomIconProps extends IconProps {
-    size: string;
-    color: string;
-    top: string;
-    left: number;
-    zIndex: number;
-}
+        <Flex flex="1" overflow="hidden">
+          <Image
+            src="https://images.unsplash.com/photo-1589156229687-496a31ad1d1f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+            alt="Lovely Image"
+            fallback={<Skeleton />}
+            maxH="450px"
+            minW="300px"
+            objectFit="cover"
+            flex="1"
+          />
+          <Image
+            display={{ base: 'none', sm: 'initial' }}
+            src="https://images.unsplash.com/photo-1589156206699-bc21e38c8a7d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+            alt="Lovely Image"
+            fallback={<Skeleton />}
+            maxH="450px"
+            objectFit="cover"
+          />
+        </Flex>
+      </Stack>
+    </Box>
+  )

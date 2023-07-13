@@ -16,42 +16,53 @@ import {
   FcManager
 } from 'react-icons/fc';
 
+import {FaHeart, FaLeaf, FaTooth} from 'react-icons/fa'
+
 interface CardProps {
   heading: string;
-  description: string;
   icon: ReactElement;
-  href: string;
 }
 
-const Card = ({ heading, description, icon, href }: CardProps) => {
+const Card = ({ heading, icon }: CardProps) => {
   return (
     <Box
       maxW={{ base: 'full', md: '275px' }}
       w={'full'}
-      borderWidth="1px"
-      borderRadius="lg"
+      rounded={'20'}
       overflow="hidden"
-      p={5}>
-      <Stack align={'start'} spacing={2}>
+      p={5}
+      mx={4}
+      cursor={'pointer'}
+      transition="all 0.3s" // Adiciona uma transição suave para o hover
+      bg={'white'} // Define a cor de fundo da caixa de acordo com o modo de cor
+      color={'#0089de'} // Define a cor do texto de acordo com o modo de cor
+      _hover={{
+        transform: 'scale(1.05)', // Aumenta o tamanho da caixa em 5% no hover
+        bg: '#0089de', // Altera a cor de fundo para azul no hover
+        color: 'white', // Define a cor do texto como branco no hover
+      }}
+    >
+      <Stack align={'center'} spacing={2}>
+        
         <Flex
           w={16}
           h={16}
           align={'center'}
           justify={'center'}
-          color={'white'}
           rounded={'full'}
-          bg={useColorModeValue('gray.100', 'gray.700')}>
+          color={'#0089de'}
+          pointerEvents="all"
+          bg={'gray.100'}
+          _hover={{
+            color: 'white'
+          }}
+          
+        >
           {icon}
         </Flex>
         <Box mt={2}>
           <Heading size="md">{heading}</Heading>
-          <Text mt={1} fontSize={'sm'}>
-            {description}
-          </Text>
         </Box>
-        <Button variant={'link'} colorScheme={'blue'} size={'sm'}>
-          Saiba mais
-        </Button>
       </Stack>
     </Box>
   );
@@ -66,35 +77,23 @@ export default function gridListWith() {
           Nossos Planos
         </Heading>
         <Text color={'gray.600'} fontSize={{ base: 'sm', sm: 'lg' }}>
-          Aqui na Hospitalar, oferecemos os melhores planos para cuidar de você, da sua família ou da sua empresa.
+        Conectamos sua empresa aos melhores benefícios de saúde do mercado, oferecendo soluções personalizadas para atender às suas necessidades.
         </Text>
       </Stack>
 
       <Container maxW={'5xl'} mt={12}>
         <Flex flexWrap="wrap" gridGap={6} justify="center">
           <Card
-            heading={'Coletivo por Adesão'}
-            icon={<Icon as={FcConferenceCall} w={10} h={10} />}
-            description={
-              'Produto disponível para profissionais filiados a uma entidade de classe, com tabela de preços e condições atrativas para contratação individual e familiar. Entre em contato com um de nossos corretores!'
-            }
-            href={'#'}
+            heading={'Plano de Saúde'}
+            icon={<Icon as={FaHeart} w={5} h={5} />}
           />
           <Card
-            heading={'Individual'}
-            icon={<Icon as={FcManager} w={10} h={10} />}
-            description={
-              'Os planos individuais são ideais para quem busca uma cobertura de saúde personalizada. Fale com um de nossos corretores para obter mais informações e encontrar o plano ideal para você.'
-            }
-            href={'#'}
+            heading={'Seguro de Vida'}
+            icon={<Icon as={FaLeaf} w={5} h={5} />}
           />
           <Card
-            heading={'Empresarial e PME'}
-            icon={<Icon as={FcOrganization} w={10} h={10} />}
-            description={
-              'O Plano de Saúde Hospitalar oferece soluções específicas para sua empresa, garantindo uma cobertura abrangente e personalizada para seus colaboradores, com tabelas de preços e condições diferenciadas.'
-            }
-            href={'#'}
+            heading={'Odontológico'}
+            icon={<Icon as={FaTooth} w={5} h={5} />}
           />
           
         </Flex>

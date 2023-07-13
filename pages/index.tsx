@@ -29,6 +29,7 @@ import {
 } from '@chakra-ui/icons';
 
 import Features from './features'
+import Features1 from './features1'
 import Features2 from './features2'
 import Features3 from './features3'
 import Features4 from './features4'
@@ -103,7 +104,7 @@ return (
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'center' }} >
           <a href="#">
-            <Image src="https://i.imgur.com/KrRh7RX.png" alt="Logo B Mais" w={220} h={41} />
+            <Image src="https://i.imgur.com/KrRh7RX.png" alt="Logo B Mais" w={240} h={'auto'} />
           </a>
         </Flex>
 
@@ -126,10 +127,10 @@ return (
               fontSize={'sm'}
               fontWeight={600}
               color={'white'}
-              bg='#013F7A'
+              bg='#0089de'
               href={'#'}
               _hover={{
-                bg: '#013f7ad4'
+                bg: '#00afd1'
               }}
               onClick={handleNavigateToContact}
             >
@@ -157,38 +158,37 @@ return (
                   bottom: 1,
                   height: 47,
                   left: 0,
-                  bgGradient: 'linear(to top, #013F7A, #013f7ad4)',
+                  bgGradient: 'linear(to top, #0089de, #00afd1)',
                   zIndex: -1,
                   animation: 'moveRight 2s ease-in-out forwards',
 
                 }}
               >
-                Hospitalar
+                B Mais
               </Text>
 
 
               <br />{' '}
               <Text
                 as={'span'}
-                bgGradient="linear(to top, #013F7A, #013f7ad4)"
+                bgGradient="linear(to top, #0089de, #00afd1)"
                 bgClip="text">
-                Planos de Saúde
+                Saúde
               </Text>{' '}
             </Heading>
             <Text fontSize={{ base: 'md', lg: 'lg' }} color={'gray.500'}>
-              Com os Planos de Saúde Hospitalar, você tem o cuidado que merece e a tranquilidade que precisa para viver com mais qualidade e bem-estar.
+            Transformando sua jornada de saúde: parcerias estratégicas e soluções personalizadas para cuidar de você, sua família e sua empresa.
             </Text>
             <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
               <Button
                 rounded={'full'}
-                bg="#013f7a"
+                bg="#0089de"
                 color={'white'}
                 _hover={{
-                  bg: '#013f7ad4',
+                  bg: '#00afd1',
                 }}>
-                Quero uma cotação
+                Quero uma demonstração
               </Button>
-              <Button rounded={'full'}>Saiba mais</Button>
             </Stack>
           </Stack>
         </Flex>
@@ -203,6 +203,7 @@ return (
 
 
       </Stack>
+      <Features1/>
 
       <Features />
       
@@ -228,7 +229,7 @@ return (
 
 const DesktopNav = () => {
   const linkColor = useColorModeValue('gray.600', '#013f7a');
-  const linkHoverColor = useColorModeValue('#013f7a', 'white');
+  const linkHoverColor = useColorModeValue('#0089de', 'white');
   const popoverContentBgColor = useColorModeValue('white', 'gray.800');
 
   return (
@@ -288,7 +289,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
         <Box>
           <Text
             transition={'all .3s ease'}
-            _groupHover={{ color: '#013f7a' }}
+            _groupHover={{ color: '#0089de' }}
             fontWeight={500}>
             {label}
           </Text>
@@ -384,15 +385,15 @@ const NAV_ITEMS: Array<NavItem> = [
     label: 'Sobre',
     children: [
       {
-        label: 'A Hospitalar',
+        label: 'A B Mais',
         href: '#',
       },
       {
-        label: 'Rede Credenciada',
+        label: 'Carreiras',
         href: '#',
       },
       {
-        label: 'Solicite uma cotação',
+        label: 'Seja Parceiro',
         href: '#',
       },
     ],
@@ -418,11 +419,29 @@ const NAV_ITEMS: Array<NavItem> = [
     ],
   },
   {
-    label: 'Tabela de Preços',
-    href: '#',
+    label: 'Ajuda',
+    children: [
+      {
+        label: 'FAQ',
+        href: '#',
+      },
+      {
+        label: 'Contato',
+        href: '#',
+      },
+    ],
   },
   {
-    label: 'Contato',
-    href: '#',
+    label: 'Conteúdo',
+    children: [
+      {
+        label: 'B+ Blog',
+        href: '#',
+      },
+      {
+        label: 'Materiais',
+        href: '#',
+      },
+    ],
   },
 ];
