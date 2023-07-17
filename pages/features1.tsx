@@ -49,7 +49,7 @@ const features = [
 
 export default function GridListWithHeading() {
   return (
-    <Box p={4}>
+    <Box p={4} bg={useColorModeValue('gray.50', 'gray.800')}>
       <Stack spacing={4} as={Container} maxW={'4xl'} textAlign={'center'}>
         <Heading fontSize={'3xl'}>Por quê escolher a B Mais?</Heading>
         <Text color={'gray.600'} fontSize={'xl'}>

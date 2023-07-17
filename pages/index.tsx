@@ -40,6 +40,8 @@ import { useRouter } from 'next/router';
 import React, { useRef } from 'react'
 import { useEffect, useState } from 'react';
 import ModalForm from './modal'
+import CtaFooter from './cta_footer';
+import Operadoras from './operadoras';
 
 
 export default function WithSubnavigation() {
@@ -216,15 +218,17 @@ return (
       <Features4 />
       <Features1/>
       <Features2 />
-      <Features />
-      
-        
       <Features3 />
+      <Features />
+      <Operadoras/>
+        
+      
       
       <Box>
         
       </Box>
       <Box>
+        <CtaFooter />
         <Footer />
        
       </Box>

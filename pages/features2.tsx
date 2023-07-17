@@ -64,7 +64,7 @@ const Card = ({ heading, icon }: CardProps) => {
           {icon}
         </Flex>
         <Box mt={2}>
-          <Heading size="md">{heading}</Heading>
+          <Heading size="md" fontWeight={'regular'}>{heading} </Heading>
         </Box>
       </Stack>
     </Box>
@@ -84,7 +84,7 @@ export default function gridListWith() {
       <Container maxW={'5xl'} mt={12}>
         <Flex flexWrap="wrap" gridGap={6} justify="center">
           <Card
-            heading={'Plano de Saúde'}
+            heading={'Plano de Saúde' }
             icon={<Icon as={FaHeart} w={5} h={5} />}
           />
           <Card

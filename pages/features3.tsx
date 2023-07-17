@@ -56,7 +56,8 @@ export default function gridListWithCTA() {
   };
 
   return (
-    <Box bg={useColorModeValue('gray.50', 'gray.800')}>
+    <Box rounded={'md'} boxShadow={'2xl'}overflow={'hidden'}
+    px={6} py={10} maxW='6xl' mx={'auto'} mt={5}>
       <Box as={Container} maxW="5xl" mt={14} p={4}>
         <Grid
           templateColumns={{
@@ -75,7 +76,7 @@ export default function gridListWithCTA() {
           </GridItem>
           <GridItem>
             <VStack alignItems="center" spacing="20px">
-              <chakra.h2 fontSize="3xl" fontWeight="700">
+              <chakra.h2 fontSize={{base:"2xl", md:'3xl'}} fontWeight="700">
                 Fale com um consultor agora
               </chakra.h2>
               <Button
