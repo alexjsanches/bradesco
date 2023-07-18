@@ -1,6 +1,8 @@
-import { chakra, HTMLChakraProps } from '@chakra-ui/react'
+import { chakra, HTMLChakraProps } from '@chakra-ui/react';
+import { ReactElement } from 'react';
 
-export const LogoUnimed = () => (
+
+export const LogoUnimed: React.FC<HTMLChakraProps<'svg'>> = () => (
     <chakra.svg
         color="#ffffff"
         height="231.24px"
@@ -568,14 +570,18 @@ export const LogoHapvida = (props: HTMLChakraProps<'svg'>) => (
     </chakra.svg>
 );
 
-const Logo = {
-    LogoUnimed,
-    LogoAmil,
-    LogoBradesco,
-    LogoGndi,
-    LogoHapvida,
-    LogoPorto,
-    LogoSulamerica,
-};
+const Logo: React.FC = () => {
+    return (
+      <div>
+        <LogoUnimed />
+        <LogoSulamerica />
+        <LogoGndi />
+        <LogoPorto />
+        <LogoAmil />
+        <LogoBradesco />
+        <LogoHapvida />
+      </div>
+    );
+  };
 
 export default Logo;

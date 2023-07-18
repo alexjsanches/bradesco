@@ -19,7 +19,7 @@ import {
   
   import {FaHeart, FaLeaf, FaTooth} from 'react-icons/fa'
   
-  import Logo from './logo';
+  import Logo, {LogoUnimed, LogoAmil, LogoBradesco, LogoGndi, LogoHapvida, LogoPorto, LogoSulamerica} from './logo';
 
 // Resto do seu código
   
@@ -73,25 +73,25 @@ import {
         <Container maxW={'6xl'} mt={10}>
           <Flex flexWrap="wrap" gridGap={6} justify="center">
             <Card
-              icon={<Logo.LogoUnimed />}
+              icon={<LogoUnimed />}
             />
             <Card
-              icon={<Logo.LogoSulamerica />}
+              icon={<LogoSulamerica />}
             />
             <Card
-              icon={<Logo.LogoGndi />}
+              icon={<LogoGndi />}
             />
             <Card
-              icon={<Logo.LogoBradesco />}
+              icon={<LogoBradesco />}
             />
             <Card
-              icon={<Logo.LogoPorto />}
+              icon={<LogoPorto />}
             />
             <Card
-              icon={<Logo.LogoAmil />}
+              icon={<LogoAmil />}
             />
             <Card
-              icon={<Logo.LogoHapvida />}
+              icon={<LogoHapvida />}
             />
             
           </Flex>
