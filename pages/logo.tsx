@@ -567,3 +567,15 @@ export const LogoHapvida = (props: HTMLChakraProps<'svg'>) => (
       ></path>
     </chakra.svg>
 );
+
+const Logo = {
+    LogoUnimed,
+    LogoAmil,
+    LogoBradesco,
+    LogoGndi,
+    LogoHapvida,
+    LogoPorto,
+    LogoSulamerica,
+};
+
+export default Logo;
