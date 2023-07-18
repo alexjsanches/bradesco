@@ -19,7 +19,9 @@ import {
   
   import {FaHeart, FaLeaf, FaTooth} from 'react-icons/fa'
   
-  import { LogoSulamerica, LogoUnimed, LogoGndi, LogoHapvida, LogoBradesco, LogoPorto, LogoAmil } from './logo';
+  import Logo from './logo';
+
+// Resto do seu código
   
   interface CardProps {
     icon: ReactElement;
@@ -71,25 +73,25 @@ import {
         <Container maxW={'6xl'} mt={10}>
           <Flex flexWrap="wrap" gridGap={6} justify="center">
             <Card
-              icon={<LogoUnimed />}
+              icon={<Logo.LogoUnimed />}
             />
             <Card
-              icon={<LogoSulamerica />}
+              icon={<Logo.LogoSulamerica />}
             />
             <Card
-              icon={<LogoGndi />}
+              icon={<Logo.LogoGndi />}
             />
             <Card
-              icon={<LogoBradesco />}
+              icon={<Logo.LogoBradesco />}
             />
             <Card
-              icon={<LogoPorto />}
+              icon={<Logo.LogoPorto />}
             />
             <Card
-              icon={<LogoAmil />}
+              icon={<Logo.LogoAmil />}
             />
             <Card
-              icon={<LogoHapvida />}
+              icon={<Logo.LogoHapvida />}
             />
             
           </Flex>
