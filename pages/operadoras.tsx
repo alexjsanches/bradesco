@@ -1,25 +1,16 @@
 import {
     Box,
-    Button,
     Container,
     Flex,
     Heading,
-    Icon,
     Stack,
-    Text,
-    useDisclosure,
-    useColorModeValue,
   } from '@chakra-ui/react';
   import { ReactElement } from 'react';
-  import {
-    FcConferenceCall,
-    FcOrganization,
-    FcManager
-  } from 'react-icons/fc';
+ 
   
-  import {FaHeart, FaLeaf, FaTooth} from 'react-icons/fa'
   
-  import Logo, {LogoUnimed, LogoAmil, LogoBradesco, LogoGndi, LogoHapvida, LogoPorto, LogoSulamerica} from './logo';
+  
+  import {LogoUnimed, LogoAmil, LogoBradesco, LogoGndi, LogoHapvida, LogoPorto, LogoSulamerica} from './logo';
 
 // Resto do seu código
   
@@ -30,27 +21,24 @@ import {
   const Card = ({ icon }: CardProps) => {
     return (
       <Box
-        maxW={{ base: 'full', md: '75px' }}
+        maxW={{ base: 'full', md: '150px' }}
         w={'full'}
         rounded={'20'}
-        overflow="hidden"
+        overflow="-moz-hidden-unscrollable"
         p={5}
-        mx={8}
-        cursor={'pointer'}
+        mx={4}
         transition="all 0.3s" // Adiciona uma transição suave para o hover
-        bg={'white'} // Define a cor de fundo da caixa de acordo com o modo de cor
+        bg={'transparent'} // Define a cor de fundo da caixa de acordo com o modo de cor
         _hover={{
           transform: 'scale(1.5)', // Aumenta o tamanho da caixa em 5% no hover
         }}
       >
-        <Stack align={'center'} spacing={2}>
+        <Stack align={'center'} spacing={1}>
           
           <Flex
-            w={'100%'}
-            h={16}
+            w={'auto'}
             align={'center'}
             justify={'center'}
-             transform={{base:'scale(0.5)', md:'scale(2)'}}
           >
             {icon}
           </Flex>
