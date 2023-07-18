@@ -50,7 +50,7 @@ import {
             h={16}
             align={'center'}
             justify={'center'}
-             transform={'scale(2)'}
+             transform={{base:'scale(0.5)', md:'scale(2)'}}
           >
             {icon}
           </Flex>
