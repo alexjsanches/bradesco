@@ -11,14 +11,11 @@ import {
   Icon,
   Link,
   Popover,
-  Container,
   PopoverTrigger,
   PopoverContent,
   useColorModeValue,
-  useBreakpointValue,
   useDisclosure,
-  Spacer,
-  Accordion,
+
 } from '@chakra-ui/react';
 import {
   HamburgerIcon,
@@ -32,10 +29,7 @@ import Features2 from './features2'
 import Features3 from './features3'
 import Features4 from './features4'
 import Leadster from './leadster'
-import Chat from './chat'
 import Footer from './footer'
-import AccordionHelp from './accordion';
-import Form from './form'
 import { useRouter } from 'next/router';
 import React, { useRef } from 'react'
 import { useEffect, useState } from 'react';
@@ -62,42 +56,42 @@ export default function WithSubnavigation() {
 
   const [isSticky, setIsSticky] = useState(false);
 
-useEffect(() => {
-  const handleScroll = () => {
-    const offset = window.scrollY;
-    if (offset > 0) {
-      setIsSticky(true);
-    } else {
-      setIsSticky(false);
-    }
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      if (offset > 0) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
 
-  window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
-  return () => {
-    window.removeEventListener('scroll', handleScroll);
-  };
-}, []);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
-return (
-  <Box>
-    <Flex
-  
-      bg={isSticky ? 'rgba(255, 255, 255, 0.7)' : 'white'}
-      color={'gray.600'}
-      minH={'80px'}
-      py={{ base: 2 }}
-      px={{ base: 4 }}
-      borderBottom={1}
-      borderStyle={'solid'}
-      borderColor={'gray.200'}
-      align={'center'}
-      position={'sticky'}
-      top={0}
-      zIndex={100}
-      backdropFilter={isSticky ? 'blur(10px)' : 'none'}
-      transition={'background-color 0.3s ease-in-out'}
-    >
+  return (
+    <Box>
+      <Flex
+
+        bg={isSticky ? 'rgba(255, 255, 255, 0.7)' : 'white'}
+        color={'gray.600'}
+        minH={'80px'}
+        py={{ base: 2 }}
+        px={{ base: 4 }}
+        borderBottom={1}
+        borderStyle={'solid'}
+        borderColor={'gray.200'}
+        align={'center'}
+        position={'sticky'}
+        top={0}
+        zIndex={100}
+        backdropFilter={isSticky ? 'blur(10px)' : 'none'}
+        transition={'background-color 0.3s ease-in-out'}
+      >
         <Flex
           flex={{ base: 1, md: 'auto' }}
           ml={{ base: -2 }}
@@ -149,7 +143,7 @@ return (
           </Flex>
         </Stack>
       </Flex>
-     
+
       <Collapse in={isOpen} animateOpacity>
         <MobileNav />
       </Collapse>
@@ -187,7 +181,7 @@ return (
               </Text>{' '}
             </Heading>
             <Text fontSize={{ base: 'md', lg: 'lg' }} color={'gray.500'}>
-            Transformando sua jornada de saúde: parcerias estratégicas e soluções personalizadas para cuidar de você, sua família e sua empresa.
+              Transformando sua jornada de saúde: parcerias estratégicas e soluções personalizadas para cuidar de você, sua família e sua empresa.
             </Text>
             <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
               <Button
@@ -216,24 +210,24 @@ return (
 
       </Stack>
       <Features4 />
-      <Features1/>
+      <Features1 />
       <Features2 />
       <Features3 />
       <Features />
-      <Operadoras/>
-        
-      
-      
+      <Operadoras />
+
+
+
       <Box>
-        
+
       </Box>
       <Box>
         <CtaFooter />
         <Footer />
-       
+
       </Box>
       <Box >
-        
+
         <Leadster />
       </Box>
 
